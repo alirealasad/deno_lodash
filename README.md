@@ -42,4 +42,3 @@ Usage of Lodash is the same. API reference can be found [here](https://lodash.co
 ## Links
 
 - [Lodash API](https://lodash.com/docs/)
-- [How to use Lodash with Deno](https://medium.com/@tokenchingy/how-to-use-lodash-with-deno-fff9d11b8c5f)
