@@ -157,7 +157,6 @@ import padEnd from "https://deno.land/x/lodash/padEnd.js";
 import padStart from "https://deno.land/x/lodash/padStart.js";
 import parseInt from "https://deno.land/x/lodash/parseInt.js";
 import partition from "https://deno.land/x/lodash/partition.js";
-import pick from "./modules/pick.ts";
 import pickBy from "https://deno.land/x/lodash/pickBy.js";
 import property from "https://deno.land/x/lodash/property.js";
 import propertyOf from "https://deno.land/x/lodash/propertyOf.js";
@@ -248,6 +247,10 @@ import zipObject from "https://deno.land/x/lodash/zipObject.js";
 import zipObjectDeep from "https://deno.land/x/lodash/zipObjectDeep.js";
 import zipWith from "https://deno.land/x/lodash/zipWith.js";
 
+import pick from "./modules/pick.js";
+import identity from "./modules/identity.ts";
+import constant from "./modules/constant.ts";
+
 export default {add, after, at, attempt, before, camelCase, capitalize, castArray, ceil,
 chunk, clamp, clone, cloneDeep, cloneDeepWith, compact, cloneWith, cond, conforms, conformsTo, countBy,
 create, debounce, deburr, defaults, defaultTo, defaultToAny, defaultsDeep,defer, delay, difference,
@@ -272,4 +275,4 @@ sortedUniq, sortedUniqBy, split, startCase, startsWith, subtract, sum, sumBy, ta
 takeRightWhile, takeWhile, throttle, times, toArray, toFinite, toInteger, toLength, toNumber, toPath, toPlainObject,
 toSafeInteger, toString, transform, trim, trimEnd, trimStart,truncate, unescape, union, unionBy, unionWith, uniq, uniqBy, uniqWith, uniqueId, unset,
 unzip, unzipWith, update, updateWith, upperCase, upperFirst, values, without, words, xor, xorBy,
-xorWith, zip, zipObject, zipObjectDeep, zipWith};
+xorWith, zip, zipObject, zipObjectDeep, zipWith, identity, constant};

@@ -1,17 +1,19 @@
 import basePickBy from "https://raw.githubusercontent.com/lodash/lodash/master/.internal/basePickBy.js"
+import hasPathIn from "https://deno.land/x/lodash/hasPathIn.js";
+import flatten from "https://deno.land/x/lodash/flatten.js";
+import isNative from "https://deno.land/x/lodash/isNative.js";
+import constant from "./constant.ts"
+import identity from "./identity.ts"
 
-
-function identity(value) {
-  return value;
-}
 function getValue(object, key) {
   return object == null ? undefined : object[key];
 }
 
 function getNative(object, key) {
   var value = getValue(object, key);
-  return _.isNative(value) ? value : undefined;
+  return isNative(value) ? value : undefined;
 }
+
 var defineProperty = (function() {
   try {
     var func = getNative(Object, 'defineProperty');
@@ -20,11 +22,6 @@ var defineProperty = (function() {
   } catch (e) {}
 }());
 
-function constant(value) {
-  return function() {
-    return value;
-  };
-}
 var baseSetToString = !defineProperty ? identity : function(func, string) {
   return defineProperty(func, 'toString', {
     'configurable': true,
@@ -95,12 +92,12 @@ function overRest(func, start, transform) {
 }
 
 function flatRest(func) {
-  return setToString(overRest(func, undefined, _.flatten), func + '');
+  return setToString(overRest(func, undefined, flatten), func + '');
 }
 
 function basePick(object, paths) {
   return basePickBy(object, paths, function(value, path) {
-    return _.hasPathIn(object, path);
+    return hasPathIn(object, path);
   });
 }
 
