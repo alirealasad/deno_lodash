@@ -2,6 +2,11 @@
 
 Lodash for the Deno runtime enviroment via import statement.
 
+## Notice
+
+I might forget to add modules or methods. So just add a issue about that I'll fix as soon as possible & also same goes for any methods not working as it should be.
+
+
 ## Table of Contents
 
 - [Deno_lodash](#Deno_lodash)
