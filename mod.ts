@@ -157,7 +157,7 @@ import padEnd from "https://deno.land/x/lodash/padEnd.js";
 import padStart from "https://deno.land/x/lodash/padStart.js";
 import parseInt from "https://deno.land/x/lodash/parseInt.js";
 import partition from "https://deno.land/x/lodash/partition.js";
-import pick from "https://deno.land/x/lodash/pick.js";
+import pick from "./modules/pick.ts";
 import pickBy from "https://deno.land/x/lodash/pickBy.js";
 import property from "https://deno.land/x/lodash/property.js";
 import propertyOf from "https://deno.land/x/lodash/propertyOf.js";
